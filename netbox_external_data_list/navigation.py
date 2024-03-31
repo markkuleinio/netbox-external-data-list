@@ -16,5 +16,5 @@ menu = PluginMenu(
     ),
     # See the icons in https://pictogrammers.com/library/mdi/
     # (remember to add the "mdi-" prefix)
-    icon_class="mdi mdi-invoice-list-outline",
+    icon_class="mdi mdi-view-list-outline",
 )
