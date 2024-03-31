@@ -3,6 +3,8 @@
 This is an example plugin for NetBox, showing how to show list-formatted
 external data in the NetBox GUI.
 
+![NetBox External Data List](docs/netbox-external-data-list.png)
+
 
 ## Installation
 
@@ -27,9 +29,11 @@ sudo systemctl restart netbox netbox-rq
 
 ## Features
 
-- Has a menu item in the main NetBox menu (can be removed if not needed)
-- Has a view (page) that can be populated from whatever data (see `views.py`)
+- A data list view (page) that can be populated from whatever data (see `views.py`)
+- The view has pagination and column sorting
+- There is a menu item in the main NetBox menu (can be removed if not needed,
+the view can be directly linked as `https://your-netbox-server-address/plugins/externaldata/datalist/`)
 - The output is rendered using a Django template (see the `templates` directory)
 - The view has restricted permissions by default (can be removed if not needed): must have
 View access to prefixes to see the page
-- The view can be directly linked as `https://your-netbox-server-address/plugins/externaldata/datalist/`
+- Tested with NetBox 3.7
